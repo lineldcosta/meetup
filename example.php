@@ -51,7 +51,7 @@ Class UserDetails {
 	}
 	
 	public function getFullName(){
-		return $this->getFirstName.' '.$this->getLastName;
+		return $this->user->getFirstName.' '.$this->user->getLastName;
 	}
 	
 }
