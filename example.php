@@ -1,4 +1,6 @@
-nterface first_name{
+<?php
+
+Interface first_name{
 public function getFirstName();
 }
 
@@ -16,6 +18,17 @@ public function password();
 
 Class User implements first_name,last_name,email,password {
 
+	public $first_name;
+	public $last_name;
+	public $email;
+	public $password;
+	public function __construct($firstName, $lastName, $email, $password){
+
+		$this->first_name = $firstName;
+		$this->last_name = $lastName;
+		$this->email	= $email;
+		$this->password	= $password;
+	}
 	public function getFirstName(){
 		return $this->first_name;
 	}
